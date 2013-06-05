@@ -1,14 +1,14 @@
 /** Define a module **/
 var employeeModule = function() {
-	
+
 	// some private variables
-	var name,
-		role,
-		salary;
+	var _name,
+		_role,
+		_salary;
 
 	// a private function
-	function getBonus() {
-		if (role == "Manager") {
+	function calculateBonus() {
+		if (_role == "Manager") {
 			return 500; // Managers get 500 bonus
 		} else {
 			return 0;
@@ -18,18 +18,18 @@ var employeeModule = function() {
 	// Return public methods
 	return {
 		initialize : function(n, r, s) {
-			name = n;
-			role = r;
-			salary = s;
+			_name = n;
+			_role = r;
+			_salary = s;
 		},
-		getName: function() { //public accessor for name
-			return name;
+		getName: function() { //public accessor for _name
+			return _name;
 		},
 		getSalary: function() {
-			return salary + getBonus();
+			return _salary + calculateBonus();
 		},
 		getRole: function() { 
-			return role;
+			return _role;
 		}
 	}
 
