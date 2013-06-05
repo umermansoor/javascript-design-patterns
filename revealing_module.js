@@ -2,7 +2,7 @@
  Defintion: "...pattern where we would simply define all of our functions and variables in the private scope and 
  return an anonymous object with pointers to the private functionality we wished to reveal as public."
  Source: http://addyosmani.com/resources/essentialjsdesignpatterns/book/
-**/
+*/
 
 /** Define a module **/
 var employeeRevealingModule = function() {
